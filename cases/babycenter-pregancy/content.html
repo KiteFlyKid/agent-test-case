@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregnancy Weight Gain Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #0288D1;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0266a1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Pregnancy Weight Gain Calculator</h2>
+        <label for="weeks">Weeks Pregnant:</label>
+        <input type="number" id="weeks" value="">
+        <label for="preWeight">Weight Before Pregnancy (lbs):</label>
+        <input type="number" id="preWeight" value="">
+        <label for="currentWeight">Current Weight (lbs):</label>
+        <input type="number" id="currentWeight" value="">
+        <label for="height">Height (ft):</label>
+        <input type="number" step="0.1" id="height" value="">
+        <button onclick="calculateWeightGain()">Calculate</button>
+        <h3 id="result"></h3>
+    </div>
+
+    <script>
+        function calculateWeightGain() {
+            let weeks = document.getElementById("weeks").value;
+            let preWeight = document.getElementById("preWeight").value;
+            let currentWeight = document.getElementById("currentWeight").value;
+            let height = document.getElementById("height").value;
+            
+            let weightGain = currentWeight - preWeight;
+            let message = `At ${weeks} weeks, your weight gain is ${weightGain} lbs.`;
+            document.getElementById("result").innerText = message;
+        }
+    </script>
+</body>
+</html>
