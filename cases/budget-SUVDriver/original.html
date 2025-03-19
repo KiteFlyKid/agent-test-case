@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>View Reservation</title>
+  <style>
+    /*
+      1) Use your screenshot as the background.
+         Replace "budget-screenshot.jpg" with your actual image file name or path.
+    */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: #3d2c1e;
+      background: url("budget_background.png") no-repeat center center;
+      background-size: cover;
+      /* The following ensures the background remains fixed in place on scroll (optional) */
+      background-attachment: fixed;
+      /* Use flexbox to center content horizontally & vertically */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+
+    /* 2) This container is placed over the "reservation area" in the middle */
+    .container {
+      max-width: 1500px;
+      width: 90%;
+      padding: 1px;
+      background-color: rgba(197, 166, 120, 0.9); /* Slight transparency to show background */
+      border-radius: 10px;
+      box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+
+    /* Form labels & inputs styled to match your original design */
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: none;
+      background-color: #f4e1ba;
+      color: #3d2c1e;
+      box-sizing: border-box;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: #3d2c1e;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #5c4433;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    h2 {
+      margin-top: 20px;
+      color: #3d2c1e;
+    }
+  </style>
+</head>
+<body>
+    <h1>Reserve Your Car Now</h1>
+    <div class="container">
+        <label>Pick-up Location:</label>
+        <input type="text" id="pickupLocation" placeholder="Enter your pick-up location or zip code">
+
+        <div class="row">
+            <label>Pick-up Date:</label>
+            <input type="date" id="pickupDate">
+            <label>Pick-up Time:</label>
+            <input type="time" id="pickupTime">
+        </div>
+
+        <label>Return to Same Location:</label>
+        <select id="returnLocation">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+
+        <div class="row">
+            <label>Return Date:</label>
+            <input type="date" id="returnDate">
+            <label>Return Time:</label>
+            <input type="time" id="returnTime">
+        </div>
+
+        <div class="row">
+            <label>Age:</label>
+            <select id="age">
+                <option>25+</option>
+                <option>21-24</option>
+                <option>Under 21</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <label>Country:</label>
+            <select id="country">
+                <option>U.S.A.</option>
+                <option>Canada</option>
+                <option>Other</option>
+            </select>
+        </div>
+
+        <button onclick="searchCar()">Select My Car</button>
+    </div>
+
+    <script>
+        function searchCar() {
+            let pickup = document.getElementById('pickupLocation').value;
+            let pickupDate = document.getElementById('pickupDate').value;
+            let returnDate = document.getElementById('returnDate').value;
+            if (!pickup || !pickupDate || !returnDate) {
+                alert('Please fill in all required fields');
+                return;
+            }
+            alert(`Searching for cars at ${pickup} from ${pickupDate} to ${returnDate}`);
+        }
+    </script>
+</body>
+</html>
