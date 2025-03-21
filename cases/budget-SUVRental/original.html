@@ -113,22 +113,26 @@
     <div class="form-container">
         <div class="form-group">
             <label>Pick-Up Location:</label>
-            <input type="text" placeholder="Enter pick-up location" />
+            <input type="text"/>
         </div>
         <div class="form-group">
             <label>Pick-Up Date & Time:</label>
             <input type="datetime-local" />
         </div>
         <div class="form-group">
+            <label>Drop-Off Location:</label>
+            <input type="text" />
+        </div>
+        <div class="form-group">
             <label>Drop-Off Date & Time:</label>
             <input type="datetime-local" />
         </div>
         <div class="form-group">
-            <label>Payment Option:</label>
-            <input type="text" placeholder="Pay Now Price (Optional)" />
+            <input type="checkbox" id="payNow" />
+            <label for="payNow">Pay Now (Lowest Price)</label>
         </div>
     </div>
-    <button onclick="bookSUV()">Book SUV Now</button>
+    <button onclick="bookSUV()">Book SUV</button>
 </div>
 
     <script>

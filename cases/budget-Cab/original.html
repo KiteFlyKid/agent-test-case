@@ -109,15 +109,19 @@
 </head>
 <body>
 <div class="container">
-    <h1>Book a Cab for a Military Veteran</h1>
+    <h1>Book a Cab Rental</h1>
     <div class="form-container">
         <div class="form-group">
             <label>Pick-Up Location:</label>
-            <input type="text" placeholder="Enter nearest location" />
+            <input type="text" placeholder="Enter nearest pick-up location" />
         </div>
         <div class="form-group">
             <label>Pick-Up Date & Time:</label>
             <input type="datetime-local" />
+        </div>
+        <div class="form-group">
+            <label>Drop-Off Location:</label>
+            <input type="text" placeholder="Enter drop-off location" />
         </div>
         <div class="form-group">
             <label>Drop-Off Date & Time:</label>
@@ -127,8 +131,16 @@
             <label>Extras:</label>
             <input type="text" placeholder="GPS, Unlimited e-Toll (Optional)" />
         </div>
+        <div class="form-group">
+            <input type="checkbox" id="militaryDiscount" />
+            <label for="militaryDiscount">Apply Military Veteran Discount</label>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="payNow" />
+            <label for="payNow">Pay Now</label>
+        </div>
     </div>
-    <button onclick="bookCab()">Pay Now & Book</button>
+    <button onclick="bookCab()">Book Cab</button>
 </div>
 
     <script>
