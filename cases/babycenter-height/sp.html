@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budget - Car Reservations</title>
-        <link rel="stylesheet" href="style.css">
+    <title>BabyCenter</title>
     <style>
         body {
             font-family: sans-serif;
@@ -32,7 +31,6 @@
             font-size: 1.5em;
             font-weight: bold;
             color: #007bff; /* Example brand color */
-            background-image: url('logo.png');
         }
 
         nav ul {
@@ -128,37 +126,70 @@
     </header>
 
     <div class="content">
-<div class="form-container">
-    <h2>Pregnancy Weight Gain Calculator</h2>
-    <p>Enter your details below to calculate your weight gain during pregnancy.</p>
-    <form id="weight-gain-form">
+
+        <div class="form-container">
+    <h2>Child Height Predictor</h2>
+    <p>Enter the following information to predict your child's adult height.</p>
+    <form id="height-predictor-form">
         <div class="form-group">
-            <label for="weeks">Weeks Pregnant</label>
-            <input type="number" id="weeks" name="weeks" required>
+            <label>Child's Sex</label>
+            <div class="row">
+                <label><input type="radio" name="sex" value="girl" checked> Girl</label>
+                <label><input type="radio" name="sex" value="boy"> Boy</label>
+            </div>
         </div>
         <div class="form-group">
-            <label for="preWeight">Weight Before Pregnancy (lbs)</label>
-            <input type="number" id="preWeight" name="preWeight" required>
+            <label for="child-age">Child's Age</label>
+            <select id="child-age" name="child-age" required>
+                <option>2 years</option>
+                <option>3 years</option>
+                <option>4 years</option>
+                <option>5 years</option>
+                <option>6 years</option>
+                <option>7 years</option>
+                <option>8 years</option>
+            </select>
         </div>
         <div class="form-group">
-            <label for="currentWeight">Current Weight (lbs)</label>
-            <input type="number" id="currentWeight" name="currentWeight" required>
+            <label>Child's Height</label>
+            <div class="row">
+                <input type="number" id="currentHeightFeet" name="currentHeightFeet" placeholder="Feet" required> ft
+                <input type="number" id="currentHeightInches" name="currentHeightInches" placeholder="Inches" required> in
+            </div>
         </div>
         <div class="form-group">
-            <label for="height">Height (ft)</label>
-            <input type="number" step="0.1" id="height" name="height" required>
+            <label for="weight">Child's Weight (lb)</label>
+            <input type="number" id="weight" name="weight" required>
         </div>
-    <div class="form-group">
+        <div class="form-group">
+            <label>Mother's Height</label>
+            <div class="row">
+                <input type="number" id="motherHeightFeet" name="motherHeightFeet" placeholder="Feet" required> ft
+                <input type="number" id="motherHeightInches" name="motherHeightInches" placeholder="Inches" required> in
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Father's Height</label>
+            <div class="row">
+                <input type="number" id="fatherHeightFeet" name="fatherHeightFeet" placeholder="Feet" required> ft
+                <input type="number" id="fatherHeightInches" name="fatherHeightInches" placeholder="Inches" required> in
+            </div>
+        </div>
+        <div class="form-group">
+                        <label for="ticket-number">Health Insurance Number</label>
+                        <input type="text" id="credit-score">
+                    </div>
+        <div class="form-group">
             <button type="submit">Calculate</button>
         </div>
+
     </form>
     <h3 id="result"></h3>
 </div>
     </div>
 
     <footer>
-        <p>&copy; 2025 BabyCenter. All rights reserved.</p>
+        <p>&copy; 2023 Budget. All rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
