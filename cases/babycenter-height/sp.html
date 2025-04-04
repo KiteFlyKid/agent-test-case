@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BabyCenter</title>
+
     <style>
         body {
             font-family: sans-serif;
@@ -191,5 +192,16 @@
     <footer>
         <p>&copy; 2023 Budget. All rights reserved.</p>
     </footer>
+    <script src="log.js"></script>
+    <script>
+        initLogger("sp.json");
+        document.addEventListener("DOMContentLoaded", function () {
+            const submitBtn = document.querySelector('button[type="submit"]');
+            submitBtn.addEventListener("click", function () {
+                alert("Task complete!");
+                downloadLog();
+            });
+        })
+    </script>
 </body>
 </html>

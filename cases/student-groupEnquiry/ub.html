@@ -145,5 +145,17 @@
             <button type="submit">Submit</button>
         </form>
     </div>
+    <script src="log.js"></script>
+    <script>
+        const filename = window.location.pathname.split("/").pop().split(".")[0];
+        initLogger(`${filename}.json`);
+        document.addEventListener("DOMContentLoaded", function () {
+            const submitBtn = document.querySelector('button[type="submit"]');
+            submitBtn.addEventListener("click", function () {
+                alert("Task complete!");
+                downloadLog();
+            });
+        })
+    </script>
 </body>
 </html>
